@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BaseScene.unity
     guid: f3beb74fe75ac4a0e9ed3d2e9950bba8
+  - enabled: 1
+    path: Assets/Scenes/PlaceObject.unity
+    guid: 7787fa4e1e9a5374e8ef75d3f7b7c745
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
       type: 2}
