@@ -1,3 +1,7 @@
 <linker>
   <assembly fullname="Unity.XR.ARKit" preserve="none" ignoreIfMissing="1"/>
+  <!-- https://issuetracker.unity3d.com/issues/il2cpp-ecs-transforms-break-on-il2cpp-backend -->
+  <assembly fullname="UnityEngine.CoreModule" preserve="all"/>
+  <!-- https://github.com/Unity-Technologies/EntityComponentSystemSamples/issues/60 -->
+  <assembly fullname="Unity.Entities.Hybrid" preserve="all"/>
 </linker>

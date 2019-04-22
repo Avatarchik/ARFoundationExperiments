@@ -4,6 +4,7 @@ using Unity.Entities;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Transforms;
+using UnityEngine;
 
 namespace ARFoundationExperiments
 {
@@ -24,6 +25,8 @@ namespace ARFoundationExperiments
 
         protected override void OnCreate()
         {
+            Debug.Log("OnCreate");
+
             // Cache the BeginInitializationEntityCommandBufferSystem in a field, so we don't have to create it every frame
             m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
         }
@@ -35,13 +38,16 @@ namespace ARFoundationExperiments
             public void Execute(Entity entity, int index, [ReadOnly] ref CursorData cursorData,
                 [ReadOnly] ref LocalToWorld location)
             {
-                    var position = new float3(0.0f, 0.0f, 0.4f);
+                    Debug.Log("Exec");
+                    var position = new float3(0.0f, 0.0f, 2.0f);
                     CommandBuffer.SetComponent(entity, new Translation {Value = position});
             }
         }
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
+            Debug.Log("OnUpdate");
+
             //Instead of performing structural changes directly, a Job can add a command to an EntityCommandBuffer to perform such changes on the main thread after the Job has finished.
             //Command buffers allow you to perform any, potentially costly, calculations on a worker thread, while queuing up the actual insertions and deletions for later.
 
