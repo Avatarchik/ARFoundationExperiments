@@ -10,3 +10,4 @@ AR Foundation experiments using LWRP & DOTS.
 * Burst: 1.0.0
 * Collections: 0.0.9
 * Mathematics: 1.0.1
+* Hybrid Renderer: 0.0.1-preview.10

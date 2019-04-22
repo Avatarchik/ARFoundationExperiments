@@ -5,6 +5,7 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 ios_build/
+Assets/EntityCache/
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -30,6 +31,7 @@ ExportedObj/
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
+*EntityCache.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
